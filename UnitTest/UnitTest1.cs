@@ -4,28 +4,28 @@ namespace UnitTest
 {
     public class Tests
     {
-        private Permutation _permutation;
+        private Main _main;
 
         [SetUp]
         public void Setup()
         {
-            _permutation = new Permutation();
+            _main = new Main();
         }
 
         [Test]
         public void Case1()
         {
-            Assert.IsTrue(_permutation.CheckIfDoesContainPermutation("baba", "abab"));
+            Assert.IsTrue(_main.CheckIfDoesContainPermutation("baba", "abab"));
         }
         [Test]
         public void Case2()
         {
-            Assert.IsFalse(_permutation.CheckIfDoesContainPermutation("baba", "abc"));
+            Assert.IsFalse(_main.CheckIfDoesContainPermutation("baba", "abc"));
         }
         [Test]
         public void Case3()
         {
-            Assert.IsTrue(_permutation.CheckIfDoesContainPermutation("lds", "loodos"));
+            Assert.IsTrue(_main.CheckIfDoesContainPermutation("lds", "loodos"));
         }
     }
 }
