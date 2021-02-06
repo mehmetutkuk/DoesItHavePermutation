@@ -4,28 +4,30 @@ namespace UnitTest
 {
     public class Tests
     {
-        private Main _main;
+        private TestHelper _testHelper;
 
         [SetUp]
         public void Setup()
         {
-            _main = new Main();
+            _testHelper = new TestHelper();
         }
 
         [Test]
-        public void Case1()
+        public void CheckIfDoesContainPermutation_returns_true_on_baba_abab()
         {
-            Assert.IsTrue(_main.CheckIfDoesContainPermutation("baba", "abab"));
+            Assert.IsTrue(_testHelper.CheckIfDoesContainPermutation("baba", "abab"));
         }
+
         [Test]
-        public void Case2()
+        public void CheckIfDoesContainPermutation_returns_false_on_baba_abc()
         {
-            Assert.IsFalse(_main.CheckIfDoesContainPermutation("baba", "abc"));
+            Assert.IsFalse(_testHelper.CheckIfDoesContainPermutation("baba", "abc"));
         }
+
         [Test]
-        public void Case3()
+        public void CheckIfDoesContainPermutation_returns_true_on_lds_loodos()
         {
-            Assert.IsTrue(_main.CheckIfDoesContainPermutation("lds", "loodos"));
+            Assert.IsTrue(_testHelper.CheckIfDoesContainPermutation("lds", "loodos"));
         }
     }
 }

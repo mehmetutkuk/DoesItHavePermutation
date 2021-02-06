@@ -1,5 +1,4 @@
-# DoesItHavePermutation
-The project success confirms that two different parameters contain permutation of one another.
+# PermutationChecker
 
 The defined problem is as follows and consists of 3 separate situations. Each case was created as a unit test and started to be developed at this stage.
 

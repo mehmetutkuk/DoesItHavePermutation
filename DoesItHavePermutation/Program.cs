@@ -6,34 +6,27 @@ namespace DoesItHavePermutation
 {
     class Program
     {
-        static List<string> l1, l2;
-        
         static void Main(string[] args)
         {
-           CheckIfPermutationContain("baba", "abab");
+           CheckIfPermutationContains("baba", "abab");
         }
      
-        public static bool CheckIfPermutationContain(string v1,string v2)
+        public static bool CheckIfPermutationContains(string v1,string v2)
         {
-            l1 = new List<string>();
-            l2 = new List<string>();
+             List<string> l1 = new List<string>();
+             List<string> l2 = new List<string>();
 
-            getEveryPermutation(ref v1, ref l1);
-            getEveryPermutation(ref v2, ref l2);
+            GetEveryPermutation(ref v1, ref l1);
+            GetEveryPermutation(ref v2, ref l2);
         
-       
-            if(l1.Contains(v2))
+            if(l1.Contains(v2) || l2.Contains(v1))
                 return true;
-            
-            if (l2.Contains(v1))
-                return true;
-
 
             return false;
           
         }
 
-       public static void getEveryPermutation(ref string str,ref List<string> target)
+       public static void GetEveryPermutation(ref string str,ref List<string> target)
         {
             Permutation _permutation = new Permutation();
             for (int i = 1; i <= str.Length; i++)
@@ -68,11 +61,11 @@ namespace DoesItHavePermutation
         }
     }
 
-    public class Main
+    public class TestHelper
     {
         public bool CheckIfDoesContainPermutation(string param1,string param2)
         {
-           return Program.CheckIfPermutationContain(param1,param2);
+           return Program.CheckIfPermutationContains(param1,param2);
         }
     }
 }
